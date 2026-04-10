@@ -1,24 +1,30 @@
-{
-  "name": "EcoFlow SHP3 Bridge",
-  "version": "1.0.0",
-  "slug": "ecoflow_shp3_bridge",
-  "description": "Local MQTT bridge for EcoFlow SHP3 + Delta Pro Ultra",
-  "startup": "services",
-  "boot": "auto",
-  "host_network": true,
-  "arch": ["amd64", "aarch64"],
-  "options": {
-    "mqtt_host": "core-mosquitto",
-    "mqtt_port": 1883,
-    "mqtt_user": "",
-    "mqtt_pass": "",
-    "update_interval": 5
-  },
-  "schema": {
-    "mqtt_host": "str",
-    "mqtt_port": "int",
-    "mqtt_user": "str?",
-    "mqtt_pass": "str?",
-    "update_interval": "int"
-  }
-}
+name: "EcoFlow SHP3 Bridge"
+version: "1.0.1"
+slug: "ecoflow_shp3_bridge"
+description: "MQTT bridge for EcoFlow SHP3"
+
+startup: services
+boot: auto
+host_network: true
+
+arch:
+  - amd64
+  - aarch64
+
+map:
+  - share:rw
+  - addon_config:rw
+
+options:
+  mqtt_host: core-mosquitto
+  mqtt_port: 1883
+  mqtt_user: ""
+  mqtt_pass: ""
+  update_interval: 5
+
+schema:
+  mqtt_host: str
+  mqtt_port: int
+  mqtt_user: str?
+  mqtt_pass: str?
+  update_interval: int
