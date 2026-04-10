@@ -1,7 +1,10 @@
-ARG BUILD_FROM
-FROM $BUILD_FROM
+FROM ghcr.io/home-assistant/amd64-base:latest
 
 ENV LANG C.UTF-8
+
+RUN apk add --no-cache \
+    python3 \
+    py3-pip
 
 WORKDIR /app
 
