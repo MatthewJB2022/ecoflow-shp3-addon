@@ -12,4 +12,4 @@ COPY . /app
 
 RUN pip3 install --no-cache-dir --break-system-packages -r requirements.txt
 
-CMD ["bash", "/app/run.sh"]
+CMD ["/app/run.sh"]
