@@ -1,4 +1,4 @@
-FROM ghcr.io/home-assistant/addon-base-python:3.12
+FROM ghcr.io/home-assistant/amd64-base-python:3.12
 
 ENV LANG=C.UTF-8
 
