@@ -1,10 +1,11 @@
 name: "EcoFlow SHP3 Bridge"
 version: "1.0.1"
 slug: "ecoflow_shp3_bridge"
-description: "MQTT bridge for EcoFlow SHP3"
+description: "MQTT bridge for EcoFlow Smart Home Panel 3 and Delta Pro Ultra"
 
-startup: services
+startup: application
 boot: auto
+init: false
 host_network: true
 
 arch:
