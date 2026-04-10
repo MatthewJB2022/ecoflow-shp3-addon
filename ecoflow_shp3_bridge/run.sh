@@ -1,5 +1,6 @@
-#!/usr/bin/with-contenv bashio
+#!/usr/bin/env bash
+set -e
 
 echo "Starting EcoFlow SHP3 Bridge..."
 
-python3 /app/main.py
+exec python3 /app/main.py
