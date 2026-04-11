@@ -1,0 +1,26 @@
+{
+  "name": "EcoFlow Daemon",
+  "version": "1.0.0",
+  "slug": "ecoflow_daemon",
+  "description": "Reads EcoFlow Smart Home Panel data and publishes to MQTT",
+  "startup": "services",
+  "boot": "auto",
+  "host_network": true,
+  "privileged": [],
+  "options": {
+    "access_key": "",
+    "secret_key": "",
+    "device_sn": "",
+    "mqtt_host": "core-mosquitto",
+    "mqtt_port": 1883,
+    "poll_interval": 10
+  },
+  "schema": {
+    "access_key": "str",
+    "secret_key": "str",
+    "device_sn": "str",
+    "mqtt_host": "str",
+    "mqtt_port": "int",
+    "poll_interval": "int"
+  }
+}
